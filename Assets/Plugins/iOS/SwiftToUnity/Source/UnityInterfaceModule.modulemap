@@ -1,0 +1,15 @@
+framework module UnityFramework {
+  umbrella header "UnityFramework.h"
+
+  export *
+  module * { export * }
+  
+  module UnityInterface {
+      header "UnityInterface.h"
+      header "UnityForwardDecls.h"
+      header "UnityRendering.h"
+      header "UnitySharedDecls.h"
+      
+      export *
+  }
+}
