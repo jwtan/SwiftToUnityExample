@@ -3,13 +3,10 @@ framework module UnityFramework {
 
   export *
   module * { export * }
-  
+
   module UnityInterface {
       header "UnityInterface.h"
-      header "UnityForwardDecls.h"
-      header "UnityRendering.h"
-      header "UnitySharedDecls.h"
-      
+
       export *
   }
 }
