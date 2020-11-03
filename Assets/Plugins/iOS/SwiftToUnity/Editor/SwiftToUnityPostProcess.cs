@@ -23,12 +23,12 @@ public static class SwiftToUnityPostProcess
             // Modulemap
             project.AddBuildProperty(unityFrameworkGuid, "DEFINES_MODULE", "YES");
 
-            var moduleFile = buildPath + "/UnityInterfaceModule.modulemap";
+            var moduleFile = buildPath + "/UnityFramework/UnityFramework.modulemap";
             if (!File.Exists(moduleFile))
             {
-                FileUtil.CopyFileOrDirectory("Assets/Plugins/iOS/SwiftToUnity/Source/UnityInterfaceModule.modulemap", moduleFile);
-                project.AddFile(moduleFile, "UnityInterfaceModule.modulemap");
-                project.AddBuildProperty(unityFrameworkGuid, "MODULEMAP_FILE", "$(SRCROOT)/UnityInterfaceModule.modulemap");
+                FileUtil.CopyFileOrDirectory("Assets/Plugins/iOS/SwiftToUnity/Source/UnityFramework.modulemap", moduleFile);
+                project.AddFile(moduleFile, "UnityFramework/UnityFramework.modulemap");
+                project.AddBuildProperty(unityFrameworkGuid, "MODULEMAP_FILE", "$(SRCROOT)/UnityFramework/UnityFramework.modulemap");
             }
 
             // Headers
